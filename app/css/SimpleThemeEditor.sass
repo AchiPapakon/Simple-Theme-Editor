@@ -1,0 +1,164 @@
+$grey: #eeeeee
+$activeLink: #457edb
+$leftHalfWidth: 400px
+$themeEditorFontColor: #555555
+
+.appContainer
+    display: flex
+    flex-direction: column
+
+.simpleThemeEditorExterior
+    margin: 20px auto
+    min-width: 725px
+    max-width: 725px
+    border: 1px solid black
+    color: $themeEditorFontColor
+
+    .simpleThemeEditor
+        margin: 10px 5px 20px 20px
+
+        .pageTitle
+            color: $activeLink
+
+        >.attributeGroup
+            margin-bottom: 5px
+            display: flex
+
+        >.attributeGroup:last-child
+            margin-bottom: 0
+
+        .attributeGroup
+
+            .attributeGroupContents
+                display: inline-block
+                margin-left: 5px
+
+            .attributeGroupTitle
+                cursor: pointer
+
+                &:focus
+                    outline: none
+
+                &:focus,
+                &:hover
+                    h4
+                        font-weight: 700
+
+.editorElementLink
+    cursor: pointer
+
+    &:focus
+        outline: none
+
+    &:focus,
+    &:hover
+        color: $activeLink
+
+    .leftSideContents
+        display: flex
+        align-items: center
+
+        .attributeValue
+            font-weight: 700
+            margin-left: 5px
+
+        .divColor
+            width: 1em
+            height: 1em
+            background: #f00
+            display: inline-block
+            border: 2px solid #000
+            border-radius: 3px
+            margin-left: 5px
+
+.leftHalf
+    display: inline-block
+    width: $leftHalfWidth
+
+.inlineEditorInactive
+    padding-left: 5px
+
+.inlineEditorActive
+    background-color: $grey
+    border-radius: 5px
+    padding: 5px 0 5px 5px
+
+    .editorElementLinkActive
+        color: $activeLink
+        position: relative
+        margin-right: 20px
+
+.inlineEditor
+    margin-right: 20px
+
+    .leftSide
+        width: 50px
+        display: inline-block
+
+    .textbox
+        width: 600px
+
+    .radioLabel
+        margin-left: 3px
+        margin-right: 15px
+
+    .valueRow
+        margin-top: 5px
+
+    .typeRow
+        margin-top: 5px
+
+    .validationRow
+        border: 1px solid red
+        background-color: pink
+
+        .errorContainer
+            margin-left: 10px
+
+.buttonX
+    position: absolute
+    right: 0
+
+button
+    border: none
+    border-radius: 2px
+
+    &:active
+        transform: translate(1px, 1px)
+
+.arrow
+    border: solid $themeEditorFontColor
+    border-width: 0 2px 2px 0
+    display: inline-block
+    padding: 3px
+
+.arrowRight
+    transform: rotate(-45deg)
+
+.arrowDown
+    transform: rotate(45deg)
+
+.simpleThemeEditorButtonBar
+    margin-top: 50px
+
+    .resetButton
+        margin-left: 5px
+
+.saveButton,
+.resetButton,
+.okButton
+    width: 75px
+    color: #ffffff
+    background-color: $activeLink
+
+.okButton
+    float: right
+
+@media screen and (min-width: 1150px)
+    .appContainer
+        flex-direction: row
+    .appContainer > *
+        flex: 1 1 0
+    .simpleThemeEditorExterior
+        max-height: 810px
+        margin-left: 20px

@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "react"
+    ],
+    "globals": {
+        "test": true,
+        "expect": true,
+        "describe": true,
+        "beforeAll": true,
+        "jest": true
+    },
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"]}],
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-one-expression-per-line": 0,
+        "react/forbid-prop-types": 0,
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "labelComponents": ["CustomLabel"],
+            "labelAttributes": ["inputLabel"],
+            "controlComponents": ["CustomInput"],
+            "assert": "either",
+            "depth": 3
+        }],
+        "jsx-a11y/anchor-is-valid": ["error", {
+            "aspects": ["noHref", "preferButton"]
+        }],
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }],
+        "operator-linebreak": ["error", "after"],
+        "comma-dangle": 0,
+        "max-len": ["error", {
+            "code": 200,
+            "comments": 200
+        }],
+        "linebreak-style": 0,
+        "import/extensions": ["error", "never", {"jsx": "always"}],
+        "no-plusplus": 0
+    }
+}
